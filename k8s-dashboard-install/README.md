@@ -25,7 +25,7 @@ docker tag ${username}/${image} k8s.gcr.io/${image}
 docker rmi ${username}/${image}
 done
 ```
-为方便无科学上网方式的同学，也可执行以下脚本直接从阿里镜像仓库拉取（感谢阿里为国内开发者作出的贡献）
+为方便无科学上网方式的同学，也可执行以下脚本直接从阿里镜像仓库拉取（感谢阿里为国内开发者作出的贡献）  
 主节点与各node节点均需要以上镜像：
 ```
 k8s.gcr.io/kubernetes-dashboard-amd64		v1.10.1		f9aed6605b81        3 months ago        122MB
