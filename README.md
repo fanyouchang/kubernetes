@@ -1,5 +1,20 @@
-# kubernetes
+# kubernetes-基于k8s-v1.15.0安装dashboard-1.10.1
 kubernetes dashboard项目官方：https://github.com/kubernetes/dashboard/releases
+
+dashboard组件：kubernetes-dashboard-v1.10.1
+镜像: k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1           
+k8s.gcr.io/heapster-amd64:v1.5.4                        
+k8s.gcr.io/heapster-influxdb-amd64:v1.5.2               
+k8s.gcr.io/heapster-grafana-amd64:v5.0.4
+
+为方便无科学上网方式的同学，也可执行以下脚本直接从阿里镜像仓库拉取（感谢阿里为国内开发者作出的贡献）
+主节点与各node节点均需要以上镜像：
+```
+k8s.gcr.io/kubernetes-dashboard-amd64		v1.10.1		f9aed6605b81        3 months ago        122MB
+k8s.gcr.io/heapster-amd64			v1.5.4		72d68eecf40c        8 months ago        75.3MB
+k8s.gcr.io/heapster-influxdb-amd64		v1.5.2		eb180058aee0        8 months ago        16.5MB
+k8s.gcr.io/heapster-grafana-amd64		v5.0.4		25e1da333f76        8 months ago        171MB
+```
 
 ##1、yaml文件:  
  *1.1. kubernetes-dashboard.yaml*  
