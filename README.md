@@ -1,9 +1,9 @@
 # kubernetes-基于k8s-v1.15.0安装dashboard-1.10.1
 kubernetes dashboard项目官方：https://github.com/kubernetes/dashboard/releases
 
-dashboard组件：kubernetes-dashboard-v1.10.1  
-镜像: k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1           
-k8s.gcr.io/heapster-amd64:v1.5.4     
+dashboard组件：kubernetes-dashboard-v1.10.1   
+镜像: k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1  
+k8s.gcr.io/heapster-amd64:v1.5.4  
 k8s.gcr.io/heapster-influxdb-amd64:v1.5.2  
 k8s.gcr.io/heapster-grafana-amd64:v5.0.4  
 
