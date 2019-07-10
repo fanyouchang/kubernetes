@@ -1,9 +1,9 @@
 # kubernetes
 kubernetes dashboard项目官方：https://github.com/kubernetes/dashboard/releases
 
-##1、yaml文件：
-*1.1. kubernetes-dashboard.yaml*   
-*1.2. kubernetes-dashboard-admin.rbac.yaml*  
+##1、yaml文件：  
+*1.1. kubernetes-dashboard.yaml*    
+*1.2. kubernetes-dashboard-admin.rbac.yaml*   
 *1.3. heapster.yaml*  
 *1.4. heapster-rbac.yaml*  
  注：官方文件中只包含了kubernetes-dashboard.yaml，且kubernetes在1.6版本以后启用了RBAC访问控制策略，直接使用官方版会出现访问权限不足的报错；
