@@ -6,8 +6,26 @@ dashboard组件：kubernetes-dashboard-v1.10.1
 k8s.gcr.io/heapster-amd64:v1.5.4  
 k8s.gcr.io/heapster-influxdb-amd64:v1.5.2  
 k8s.gcr.io/heapster-grafana-amd64:v5.0.4  
-
-为方便无科学上网方式的同学，也可执行以下脚本直接从阿里镜像仓库拉取（感谢阿里为国内开发者作出的贡献）
+```
+DASHDOARD_VERSION=v1.10.1
+HEAPSTER_VERSION=v1.5.4
+GRAFANA_VERSION=v5.0.4
+INFLUXDB_VERSION=v1.5.2
+username=registry.cn-hangzhou.aliyuncs.com/google_containers
+images=(
+        kubernetes-dashboard-amd64:${DASHDOARD_VERSION}
+        heapster-grafana-amd64:${GRAFANA_VERSION}
+        heapster-amd64:${HEAPSTER_VERSION}
+        heapster-influxdb-amd64:${INFLUXDB_VERSION}
+        )
+for image in ${images[@]}
+do
+docker pull ${username}/${image}
+docker tag ${username}/${image} k8s.gcr.io/${image}
+docker rmi ${username}/${image}
+done
+```
+为方便无科学上网方式的同学，也可执行以下脚本直接从阿里镜像仓库拉取（感谢阿里为国内开发者作出的贡献）  
 主节点与各node节点均需要以上镜像：
 ```
 k8s.gcr.io/kubernetes-dashboard-amd64		v1.10.1		f9aed6605b81        3 months ago        122MB
