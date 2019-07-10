@@ -1,8 +1,8 @@
 # kubernetes
 kubernetes dashboard项目官方：https://github.com/kubernetes/dashboard/releases
 
-##1、yaml文件：  
- *1.1. kubernetes-dashboard.yaml*               
+##1、yaml文件:  
+ *1.1. kubernetes-dashboard.yaml*  
  *1.2. kubernetes-dashboard-admin.rbac.yaml*  
  *1.3. heapster.yaml*  
  *1.4. heapster-rbac.yaml*  
