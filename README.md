@@ -1,11 +1,11 @@
 # kubernetes-基于k8s-v1.15.0安装dashboard-1.10.1
 kubernetes dashboard项目官方：https://github.com/kubernetes/dashboard/releases
 
-dashboard组件：kubernetes-dashboard-v1.10.1
-镜像: k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1           
-k8s.gcr.io/heapster-amd64:v1.5.4                        
-k8s.gcr.io/heapster-influxdb-amd64:v1.5.2               
-k8s.gcr.io/heapster-grafana-amd64:v5.0.4
+dashboard组件：kubernetes-dashboard-v1.10.1  
+镜像: k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1           
+k8s.gcr.io/heapster-amd64:v1.5.4     
+k8s.gcr.io/heapster-influxdb-amd64:v1.5.2  
+k8s.gcr.io/heapster-grafana-amd64:v5.0.4  
 
 为方便无科学上网方式的同学，也可执行以下脚本直接从阿里镜像仓库拉取（感谢阿里为国内开发者作出的贡献）
 主节点与各node节点均需要以上镜像：
@@ -29,7 +29,7 @@ kubernetes-dashboard.yaml 中修改 serviceAccountName，外部访问dashboard�
 kubernetes-dashboard-admin（默认为kubernetes-dashboard）
 
 
-
+```
 [root@k8s-master ~]# kubectl apply -n kube-system -f .      # 执行安装  
 clusterrolebinding.rbac.authorization.k8s.io/heapster created  
 serviceaccount/heapster created  
@@ -55,7 +55,7 @@ kubernetes-dashboard-7d75c474bb-wvfc7   1/1     Running   0          92m
 kubernetes-dashboard            ClusterIP   10.110.109.159   <none>        443/TCP                  93m  
 kubernetes-dashboard-external   NodePort    10.108.194.91    <none>        9090:31666/TCP           2m27s  
 [root@k8s-master ~]#   
-
+```
 
 Running状态说明运行正常，直接可通过masterip:端口号访问ui界面。  
 可根据需要修改nodePort参数来修改访问端口。  
